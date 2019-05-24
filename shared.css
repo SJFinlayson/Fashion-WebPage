@@ -1,0 +1,94 @@
+@import url('https://fonts.googleapis.com/css?family=PT+Mono');
+
+* {
+	font-family: 'PT Mono', monospace;
+}
+
+html {
+	background-color: #EEE;
+}
+
+#social, nav ul {
+	padding: 0;
+	list-style-type: none;
+}
+
+#social a, #social a:link, #social a:visited, #social a:hover, #social a:active {
+	color: inherit;
+	text-decoration: inherit;
+	font-weight: inherit;
+}
+
+main {
+	margin:1em 0 1em 0;
+}
+
+.media {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0;
+    padding: 0;
+}
+
+.media li {
+    margin: 0;
+    padding: 0;
+}
+
+.gallery {
+    margin-top: 1em;
+    border: 1px solid #778;
+}
+
+.media-item {
+    display: flex;
+    width: 100%;
+}
+
+img	{
+	max-width: 100%;
+}
+
+@media screen and (min-width: 40em) {
+    .media-item {width: 50%;}
+}
+
+@media screen and (min-width: 55em) {
+    .media-item {width: 33.33%;}
+}
+
+
+.media-content {
+    display: flex;
+    flex-direction: column;
+    padding: 1em;
+    width: 100%;
+}
+
+.media-content-R {
+    transform: rotate(90deg)
+    display: flex;
+    flex-direction: column;
+    padding: 1em;
+    width: 100%;
+}
+
+.media-content-L {
+    transform: rotate(-90deg)
+    display: flex;
+    flex-direction: column;
+    padding: 1em;
+    width: 100%;
+}
+
+@media (min-width: 55em) /* 880px*/
+	{
+/*Nest CSS rules inside the media query brackets*/
+		.banner { padding: 1.5em 3em 1.5em 3em; }
+		.menu { padding: 1em 3em 1em 3em; }
+		article { padding: 2em; }
+        
+@media (max-width: 30em) {
+    article img {display: none;} 
+    .gallery {display: none;}
+}
