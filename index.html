@@ -10,20 +10,18 @@
 <link href="carousel.css" rel="stylesheet" type="text/css" >
 <script type="text/javascript" src="carousel.js"></script>	
 </head>
-
+<!--Above is importing relevant pages, ignore for editing.-->
+    
 <body onload="showSlides()">
 	<div id="wrapper">
-		
 		<div id="top-section">
+		<div id="student-name" align='center'><h1>FIRSTNAME<br>LASTNAME</h1></div>
+<!--		<div id="center-spacer"> </div>-->
 		
-		
-		<div id="student-name"><h1>Scott<br>LASTNAME</h1></div>
-		<div id="center-spacer"> </div>
-		<div id="student-social-links">
-			<a href="#1"><img src="images/instagram.png" alt="instagram" /></a>
-			<a href="#2"><img src="images/pinterest.png" alt="pinterest" /></a>
-		</div>
-			
+<!--			This section contains name and social media links for each person.-->
+<!--            Uncomment and fill in as appropriate per person.-->
+            
+            
 		</div>
 		<nav>
 			<ul>
@@ -31,11 +29,12 @@
                 <li><a href="Gallery.html">Portfolio</a></li>
                 <li><a href="AboutMe.html">About Me</a></li>
 			</ul>
-		</nav>
-		
-		<div id="carousel">
+		</nav> 
+<!--		Links to each page do not edit.-->
+        
+		<div id="carousel"> 
+<!--            Sets up carousel section-->
 			<div class="my-slides fade">
-
 				<div class="numbertext"></div>
 				<img src="carousel/carousel1.jpg" style="width: 100%" />
 <!--				<div class="text">Caption Text</div>-->
@@ -58,13 +57,19 @@
 				<img src="carousel/carousel4.jpg" style="width: 100%" />
 <!--				<div class="text">Caption Text</div>-->
 			</div>
-<!--
+<!--        
+            These sections are for the carousel images, put images into the correct folder and then in "img src="carousel/IMAGE_NAME" " 
+            fill in the correct image names.
 			<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
 			<a class="next" onclick="plusSlides(1)">&#10095;</a>
 -->
-		    
         </div>
-		
+		<div id="student-social-links" align='center'>
+			<a href="LINK HERE"><img src="images/instagram.png" alt="instagram" /></a>
+			<a href="LINK HERE"><img src="images/pinterest.png" alt="pinterest" /></a>
+            <a href="LINK HERE"><img src="images/tumblr.png" alt="tumblr" /></a>
+			<a href="LINK HERE"><img src="images/twitter.png" alt="twitter" /></a>
+		</div>
 	</div>
 </body>
 </html>
