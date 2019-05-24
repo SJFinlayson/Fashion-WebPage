@@ -9,7 +9,16 @@
     <link href="mobile.css" rel="stylesheet" type="text/css" media="screen and (orientation:portrait)">	
     <link href="shared.css" rel="stylesheet" type="text/css" >
     <link href="carousel.css" rel="stylesheet" type="text/css" >
-    <script type="text/javascript" src="carousel.js"></script>	
+    <script type="text/javascript" src="carousel.js"></script>
+    <script src="/path/to/masonry.pkgd.min.js"></script>
+    <script>$('.grid').masonry({
+            itemSelector: '.grid-item',
+            columnWidth: '.grid-sizer',
+            horizontalOrder: true,
+            percentPosition: true
+            });
+    </script>
+    
 </head>
 
 <body>
@@ -27,8 +36,31 @@
 			</ul>
 		</nav>
     <main>
+        
+      <div class="grid">
+          <div class="grid-sizer"><img src="images/lookbook%202.jpg" alt="Look 1"/></div>
+          <div class="grid-item"><img src="images/lookbook%203.jpg" alt="Look 1"/></div>
+          <div class="grid-item"><img src="images/lookbook%204.jpg" alt="Look 1"/></div>
+          <div class="grid-item"><img src="images/lookbook%201.jpg" alt="Look 1"/></div>
+          <div class="grid-item"><img src="images/AwesomeDog.jpg" alt="Look 1"/></div>
+          <div class="grid-item"><img src="images/BestDog.jpg" alt="Look 1"/></div>
+          <div class="grid-item"><img src="images/CUTE%20DOG.jpg" alt="Look 1"/></div>
+          <div class="grid-item"><img src="images/SunnyDog.jpg" alt="Look 1"/></div>
+          <div class="grid-item"><img src="images/lookbook%205.jpg" alt="Look 1"/></div>
+          <div class="grid-item"><img src="images/lookbook%206.jpg" alt="Look 1"/></div>
+          <div class="grid-item"><img src="images/blurred%20images_Page_1.png" alt="Look 1"/></div>
+          <div class="grid-item"><img src="images/blurred%20images_Page_2.png" alt="Look 1"/></div>
+          <div class="grid-item"><img src="images/SmartDog.jpg" alt="Look 1"/></div>
+          <div class="grid-item"><img src="images/NeedyDog.jpg" alt="Look 1"/></div>
+          <div class="grid-item"><img src="images/SleepyDog.jpg" alt="Look 1"/></div>
+          <div class="grid-item"><img src="images/OMGDog.jpg" alt="Look 1"/></div>
+        </div>  
+        
+        
+        
+        
     <div class = "gallery">
-        <div class="row">
+       <!-- <div class="row">
             <div class="column">
                 <img src="images/AwesomeDog.jpg" alt="Look 1"/>
                 <img src="images/BestDog.jpg" alt="Look 4"/>
@@ -43,7 +75,7 @@
                 <img src="images/OMGDog.jpg" alt="Look 3"/>
                 <img src="images/SunnyDog.jpg" alt="Look 6"/>
             </div>
-        </div>
+        </div>-->
     <!--<ol class="media">
         <li class ="media-item" >
         <div class="media-content-R">

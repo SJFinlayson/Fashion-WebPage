@@ -43,6 +43,41 @@ main {
 	margin:1em 0 1em 0;
 }
 
+.grid {
+  background: #EEE;
+  max-width: 100%;
+  counter-reset: grid-item;
+}
+
+/* clearfix */
+.grid:after {
+  content: '';
+  display: block;
+  clear: both;
+}
+
+/* ---- grid-item ---- */
+.grid-sizer,
+.grid-item {
+    width: 100%;
+    height: auto;
+    float: left;
+    background: #D26;
+    border: 2px solid #333;
+    border-color: hsla(0, 0%, 0%, 0.5);
+    border-radius: 5px;
+}
+
+.grid-item:before {
+  counter-increment: grid-item;
+  content: counter(grid-item);
+  display: block;
+  color: white;
+  padding-top: 0.2em;
+  text-align: center;
+  font-size: 1.4rem;
+}
+
 .about {
     text-align: center;
 }
@@ -73,34 +108,19 @@ img	{
 }
 
 @media screen and (min-width: 40em) {
-    .media-item {
+    .grid-sizer,
+    .grid-item {
         width: 50%;
-        max-height: 300px;
     }
 }
 
 @media screen and (min-width: 55em) {
-    .media-item {
+    .grid-sizer,
+    .grid-item {
         width: 33.33%;
-        max-height: 40em;
     }
 }
 
-/* Responsive layout - makes a two column-layout instead of four columns */
-@media screen and (max-width: 800px) {
-  .column {
-    flex: 50%;
-    max-width: 50%;
-  }
-}
-
-/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
-@media screen and (max-width: 600px) {
-  .column {
-    flex: 100%;
-    max-width: 100%;
-  }
-}
 .media-content {
     display: flex;
     flex-direction: column;
