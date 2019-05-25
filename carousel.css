@@ -2,10 +2,9 @@
 
 /* Slideshow container */
 #carousel {
-  min-width: 500px;
-  max-width: 1920px;
-  width: 70%;
-  position: relative;
+
+  width: 50%;
+  position: center;
   margin: auto;
 }
 
