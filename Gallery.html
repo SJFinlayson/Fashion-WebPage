@@ -10,14 +10,8 @@
     <link href="shared.css" rel="stylesheet" type="text/css" >
     <link href="carousel.css" rel="stylesheet" type="text/css" >
     <script type="text/javascript" src="carousel.js"></script>
-    <script src="/path/to/masonry.pkgd.min.js"></script>
-    <script>$('.grid').masonry({
-            itemSelector: '.grid-item',
-            columnWidth: '.grid-sizer',
-            horizontalOrder: true,
-            percentPosition: true
-            });
-    </script>
+    <script src="/masonry.pkgd.min.js"></script>
+    <script src="imagesloaded.pkgd.min.js"></script>
     
 </head>
 
@@ -37,7 +31,8 @@
 		</nav>
     <main>
         
-      <div class="grid">
+      <div id="masonry-grid">
+          <div class="grid-sizer"></div>
           <div class="grid-sizer"><img src="images/AwesomeDog.jpg" alt="Look 1"/></div>
           <div class="grid-item"><img src="images/BestDog.jpg" alt="Look 1"/></div>
           <div class="grid-item"><img src="images/OMGDog.jpg" alt="Look 1"/></div>
@@ -53,48 +48,6 @@
         
         
     <div class = "gallery">
-       <!-- <div class="row">
-            <div class="column">
-                <img src="images/AwesomeDog.jpg" alt="Look 1"/>
-                <img src="images/BestDog.jpg" alt="Look 4"/>
-                <img src="images/SmartDog.jpg" alt="Blurred Look 1"/>
-            </div>
-            <div class="column">
-                <img src="images/lookbook%201.jpg" alt="Look 2"/>
-                <img src="images/NeedyDog.jpg" alt="Look 5"/>
-                <img src="images/SleepyDog.jpg" alt="Blurred Look 2"/>
-            </div>
-            <div class="column">
-                <img src="images/OMGDog.jpg" alt="Look 3"/>
-                <img src="images/SunnyDog.jpg" alt="Look 6"/>
-            </div>
-        </div>-->
-    <!--<ol class="media">
-        <li class ="media-item" >
-        <div class="media-content-R">
-            <img src="images/AwesomeDog.jpg" alt="Look 1"/></div></li>
-        <li class ="media-item">
-        <div class="media-content-R">
-            <img src="images/lookbook%201.jpg" alt="Look 2"/></div></li>
-        <li class ="media-item">
-        <div class="media-content-R">
-            <img src="images/OMGDog.jpg" alt="Look 3"/></div></li>
-        <li class ="media-item">
-        <div class="media-content-R">
-            <img src="images/BestDog.jpg" alt="Look 4"/></div></li>
-        <li class ="media-item">
-        <div class="media-content-R">
-            <img src="images/NeedyDog.jpg" alt="Look 5"/></div></li>
-        <li class ="media-item">
-        <div class="media-content-R">
-            <img src="images/SunnyDog.jpg" alt="Look 6"/></div></li>
-        <li class ="media-item">
-        <div class="media-content">
-            <img src="images/SmartDog.jpg" alt="Blurred Look 1"/></div></li>
-        <li class ="media-item">
-        <div class="media-content">
-            <img src="images/SleepyDog.jpg" alt="Blurred Look 2"/></div></li>
-        </ol>-->
         <p><small>All images property of this beautiful puppy</small></p>
     </div>
         
@@ -104,4 +57,23 @@
 		</div>
 			
     </main>
-    </body>
+    </body>    
+</html>
+<script type="text/javascript">
+    // Javascript
+    var container = document.querySelector('#masonry-grid');
+    var imgs = document.querySelectorAll('.grid-item')
+    var imgLoad = imagesLoaded(container)
+    function onAlways() {
+        var msnry = new Masonry( container, {
+            // options
+            itemSelector: '.grid-item',
+            columnWidth: '.grid-sizer',
+            horizontalOrder: true,
+            percentPosition: true
+        });
+    }
+    if (container) {
+        imgLoad.on('always', onAlways)
+    }
+</script>
